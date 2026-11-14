@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "config_hash": "SYNTHETIC_HASH",
+  "rows": [
+    {
+      "row_id": "R001",
+      "entity_ref": "E1",
+      "source_key": "synthetic_fuel",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S1",
+      "iso_category": "direct",
+      "s3_category": null,
+      "raw": {
+        "value": 100,
+        "unit": "kg",
+        "source_file": "vouchers/sample_001.pdf",
+        "source_locator": "sheet1!B2",
+        "extractor": "excel_ledger",
+        "confidence": "high"
+      },
+      "normalized": { "value": 100, "unit": "kg" },
+      "conversion_chain": [
+        {
+          "op": "identity",
+          "from_unit": "kg",
+          "to_unit": "kg",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion required"
+        }
+      ],
+      "data_quality": { "activity": "X", "factor": "A", "instrument": "L" },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": ["vouchers/sample_001.pdf"],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R002",
+      "entity_ref": "E2",
+      "source_key": "synthetic_freight",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "billing",
+        "billing_note": "billing window crosses a natural month boundary"
+      },
+      "scope": "S3",
+      "iso_category": "transport",
+      "s3_category": 4,
+      "raw": {
+        "value": 500,
+        "unit": "tkm",
+        "source_file": "vouchers/sample_002.xlsx",
+        "source_locator": "Sheet1!F5",
+        "extractor": "excel_ledger",
+        "confidence": "medium"
+      },
+      "normalized": { "value": 500, "unit": "tkm" },
+      "conversion_chain": [
+        {
+          "op": "mass_times_distance",
+          "from_unit": "t;km",
+          "to_unit": "tkm",
+          "factor": 1,
+          "reference": "synthetic_distance_table",
+          "note": "synthetic conversion chain example"
+        }
+      ],
+      "data_quality": { "activity": "Y", "factor": "B", "instrument": "M" },
+      "estimated": true,
+      "estimation_note": "synthetic estimation for contract testing",
+      "carry_over_from": null,
+      "evidence_files": ["vouchers/sample_002.xlsx"],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "medium"
+      }
+    }
+  ]
+}

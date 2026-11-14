@@ -1,0 +1,514 @@
+{
+  "stage": 4,
+  "status": "pass",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "lines": [
+    {
+      "row_id": "R001",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "s3_category": null,
+      "scope2_mode": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F01",
+      "ad": 100.0,
+      "ad_unit": "kg",
+      "ef": 2.0,
+      "ef_unit": "kgCO2e/kg",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F01",
+          "priority": 1,
+          "value": 2.0,
+          "unit": "kgCO2e/kg",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "identity",
+          "from_unit": "kg",
+          "to_unit": "kg",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion",
+          "result": "100"
+        }
+      ]
+    },
+    {
+      "row_id": "R002",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "s3_category": null,
+      "scope2_mode": null,
+      "source_key": "refrigerant_leak",
+      "gas": "HFCs",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F02",
+      "ad": 5.0,
+      "ad_unit": "kg",
+      "ef": 1.0,
+      "ef_unit": "kgCO2e/kg",
+      "gwp": 100.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F02",
+          "priority": 2,
+          "value": 1.0,
+          "unit": "kgCO2e/kg",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "multiply",
+          "from_unit": "kg",
+          "to_unit": "kg",
+          "factor": 0.5,
+          "reference": "synthetic_leak_rate",
+          "note": "charge multiplied by leak rate",
+          "result": "5.0"
+        }
+      ]
+    },
+    {
+      "row_id": "R003",
+      "entity_ref": "E1",
+      "scope": "S2",
+      "s3_category": null,
+      "scope2_mode": "location_based",
+      "source_key": "grid_power_location",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F03",
+      "ad": 1000.0,
+      "ad_unit": "kWh",
+      "ef": 0.5,
+      "ef_unit": "kgCO2e/kWh",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F03",
+          "priority": 3,
+          "value": 0.5,
+          "unit": "kgCO2e/kWh",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "identity",
+          "from_unit": "kWh",
+          "to_unit": "kWh",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion",
+          "result": "1000"
+        }
+      ]
+    },
+    {
+      "row_id": "R004",
+      "entity_ref": "E1",
+      "scope": "S2",
+      "s3_category": null,
+      "scope2_mode": "market_based",
+      "source_key": "grid_power_market",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F04",
+      "ad": 1000.0,
+      "ad_unit": "kWh",
+      "ef": 0.2,
+      "ef_unit": "kgCO2e/kWh",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F04",
+          "priority": 4,
+          "value": 0.2,
+          "unit": "kgCO2e/kWh",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "identity",
+          "from_unit": "kWh",
+          "to_unit": "kWh",
+          "factor": 1,
+          "reference": null,
+          "note": "same activity data, market-based view",
+          "result": "1000"
+        }
+      ]
+    },
+    {
+      "row_id": "R005",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "s3_category": 1,
+      "scope2_mode": null,
+      "source_key": "purchased_goods",
+      "gas": "CO2",
+      "method": "spend_based",
+      "method_origin": "per_source",
+      "factor_id": "F05",
+      "ad": 2000.0,
+      "ad_unit": "USD",
+      "ef": 0.3,
+      "ef_unit": "kgCO2e/USD",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F05",
+          "priority": 5,
+          "value": 0.3,
+          "unit": "kgCO2e/USD",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "currency_conversion",
+          "from_unit": "CNY",
+          "to_unit": "USD",
+          "factor": 0.2,
+          "reference": "fx_table",
+          "note": "synthetic exchange rate supplied at run time",
+          "result": "2000.0"
+        }
+      ]
+    },
+    {
+      "row_id": "R006",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "s3_category": 2,
+      "scope2_mode": null,
+      "source_key": "capital_goods",
+      "gas": "CO2",
+      "method": "spend_based",
+      "method_origin": "per_source",
+      "factor_id": "F06",
+      "ad": 1000.0,
+      "ad_unit": "USD",
+      "ef": 0.4,
+      "ef_unit": "kgCO2e/USD",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F06",
+          "priority": 6,
+          "value": 0.4,
+          "unit": "kgCO2e/USD",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "currency_conversion",
+          "from_unit": "CNY",
+          "to_unit": "USD",
+          "factor": 0.2,
+          "reference": "fx_table",
+          "note": "synthetic exchange rate supplied at run time",
+          "result": "1000.0"
+        }
+      ]
+    },
+    {
+      "row_id": "R007",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "s3_category": 3,
+      "scope2_mode": null,
+      "source_key": "well_to_tank",
+      "gas": "CO2",
+      "method": "wtt",
+      "method_origin": "per_source",
+      "factor_id": "F07",
+      "ad": 1000.0,
+      "ad_unit": "kWh",
+      "ef": 0.1,
+      "ef_unit": "kgCO2e/kWh",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F07",
+          "priority": 7,
+          "value": 0.1,
+          "unit": "kgCO2e/kWh",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "identity",
+          "from_unit": "kWh",
+          "to_unit": "kWh",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion",
+          "result": "1000"
+        }
+      ]
+    },
+    {
+      "row_id": "R008",
+      "entity_ref": "E2",
+      "scope": "S3",
+      "s3_category": 4,
+      "scope2_mode": null,
+      "source_key": "upstream_freight",
+      "gas": "CO2",
+      "method": "distance_based",
+      "method_origin": "per_source",
+      "factor_id": "F08",
+      "ad": 1000.0,
+      "ad_unit": "tkm",
+      "ef": 0.6,
+      "ef_unit": "kgCO2e/tkm",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F08",
+          "priority": 8,
+          "value": 0.6,
+          "unit": "kgCO2e/tkm",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "mass_times_distance",
+          "from_unit": "t",
+          "to_unit": "tkm",
+          "factor": 5,
+          "reference": "synthetic_distance_table",
+          "note": "mass multiplied by synthetic haul distance",
+          "result": "1000"
+        }
+      ]
+    },
+    {
+      "row_id": "R009",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "s3_category": 5,
+      "scope2_mode": null,
+      "source_key": "waste_incineration",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F09",
+      "ad": 8.0,
+      "ad_unit": "t",
+      "ef": 500.0,
+      "ef_unit": "kgCO2e/t",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F09",
+          "priority": 9,
+          "value": 500.0,
+          "unit": "kgCO2e/t",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "ratio_split",
+          "from_unit": "t",
+          "to_unit": "t",
+          "factor": 0.8,
+          "reference": "synthetic_treatment_share",
+          "note": "share of waste sent to this treatment",
+          "result": "8.0"
+        }
+      ]
+    },
+    {
+      "row_id": "R010",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "s3_category": 6,
+      "scope2_mode": null,
+      "source_key": "business_travel",
+      "gas": "CO2",
+      "method": "distance_based",
+      "method_origin": "per_source",
+      "factor_id": "F10",
+      "ad": 1000.0,
+      "ad_unit": "pkm",
+      "ef": 0.2,
+      "ef_unit": "kgCO2e/pkm",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F10",
+          "priority": 10,
+          "value": 0.2,
+          "unit": "kgCO2e/pkm",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "fee_to_distance",
+          "from_unit": "CNY",
+          "to_unit": "pkm",
+          "factor": 0.5,
+          "reference": "synthetic_fare_table",
+          "note": "spend converted to passenger kilometres",
+          "result": "1000.0"
+        }
+      ]
+    },
+    {
+      "row_id": "R011",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "s3_category": 7,
+      "scope2_mode": null,
+      "source_key": "employee_commute",
+      "gas": "CO2",
+      "method": "distance_based",
+      "method_origin": "per_source",
+      "factor_id": "F11",
+      "ad": 1000.0,
+      "ad_unit": "pkm",
+      "ef": 0.05,
+      "ef_unit": "kgCO2e/pkm",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F11",
+          "priority": 11,
+          "value": 0.05,
+          "unit": "kgCO2e/pkm",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "sample_amplification",
+          "from_unit": "pkm",
+          "to_unit": "pkm",
+          "factor": 10,
+          "reference": "synthetic_survey",
+          "note": "survey sample amplified to headcount",
+          "result": "1000"
+        }
+      ]
+    },
+    {
+      "row_id": "R012",
+      "entity_ref": "E2",
+      "scope": "S3",
+      "s3_category": 9,
+      "scope2_mode": null,
+      "source_key": "downstream_freight",
+      "gas": "CO2",
+      "method": "distance_based",
+      "method_origin": "per_source",
+      "factor_id": "F12",
+      "ad": 500.0,
+      "ad_unit": "tkm",
+      "ef": 0.02,
+      "ef_unit": "kgCO2e/tkm",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F12",
+          "priority": 12,
+          "value": 0.02,
+          "unit": "kgCO2e/tkm",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": [
+        {
+          "index": 0,
+          "op": "identity",
+          "from_unit": "tkm",
+          "to_unit": "tkm",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion",
+          "result": "500"
+        }
+      ]
+    }
+  ],
+  "candidates": [],
+  "errors": [],
+  "warnings": []
+}

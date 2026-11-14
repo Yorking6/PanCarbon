@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "_instructions": "Copy this file into a run directory, replace every __REQUIRED__ marker, then run: ghg init --config <path>. Values are supplied at run time only; this template carries no organization data.",
+  "organization": {
+    "name": "__REQUIRED__",
+    "boundary_description": "__REQUIRED__",
+    "addresses": []
+  },
+  "reporting_year": 0,
+  "base_year": null,
+  "consolidation_method": "__REQUIRED__",
+  "entities": [
+    {
+      "id": "__REQUIRED__",
+      "name": "__REQUIRED__",
+      "grid_region_ref": null
+    }
+  ],
+  "gases": ["CO2", "CH4", "N2O", "HFCs", "PFCs", "SF6", "NF3"],
+  "gwp_version": "__REQUIRED__",
+  "scope2": {
+    "modes": ["__REQUIRED__"],
+    "market_instruments": []
+  },
+  "scope3": {
+    "enabled_categories": [],
+    "not_applicable_reasons": {},
+    "cutoff": {
+      "rule": null,
+      "threshold_pct": 0
+    }
+  },
+  "methodology": {
+    "default": null,
+    "per_source": {},
+    "allowed_methods": []
+  },
+  "assurance": {
+    "level": null,
+    "materiality": null,
+    "verifier": null
+  },
+  "report": {
+    "modes": ["__REQUIRED__"],
+    "languages": ["__REQUIRED__"],
+    "charts": true,
+    "titles": {},
+    "signoff_ref": null
+  },
+  "currency": {
+    "code": "___",
+    "fx_table_ref": null
+  },
+  "recalc_policy": {
+    "base_year_recalc_trigger": []
+  },
+  "quality": {
+    "grade_thresholds": {},
+    "volatility_warn_pct": 0,
+    "scores": {}
+  },
+  "factor_library_ref": "__REQUIRED__",
+  "activity_ledger_ref": "__REQUIRED__"
+}

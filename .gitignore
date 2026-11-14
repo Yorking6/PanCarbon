@@ -1,0 +1,17 @@
+# Python 虚拟环境（300MB，绝不入库）
+.venv/
+
+# Python 运行产物
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# 运行目录中的临时文件（example_run / example_vouchers_run 作为演示样例保留）
+*.log
+.DS_Store
+Thumbs.db
+
+# Office 临时锁文件
+~$*.xlsx
+~$*.docx

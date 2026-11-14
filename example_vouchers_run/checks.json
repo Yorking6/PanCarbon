@@ -1,0 +1,61 @@
+{
+  "stage": 7,
+  "milestone": "M1+M2+M3+M5",
+  "status": "pass",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "rules_run": [
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "V08",
+    "V10",
+    "V11",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V19",
+    "V06",
+    "V09",
+    "V07",
+    "V12",
+    "V13",
+    "V20"
+  ],
+  "rules_deferred": {},
+  "errors": [],
+  "warnings": [
+    {
+      "rule": "V15",
+      "object": "V1",
+      "message": "market-based result mirrors location-based; verify market instruments"
+    },
+    {
+      "rule": "V09",
+      "object": "workbook",
+      "message": "recalculated with formulas across 42 cells"
+    }
+  ],
+  "dual_track": {
+    "status": "match",
+    "lines_checked": 4,
+    "max_delta": "0"
+  },
+  "v14": {
+    "files_scanned": 22,
+    "hits": [],
+    "status": "clean"
+  },
+  "v09": {
+    "engine": "formulas",
+    "formula_cells": 42,
+    "cells_checked": 42,
+    "max_delta": 0.0,
+    "external_links": 0,
+    "issues": []
+  },
+  "reports_checked": 4,
+  "delivery_ready": true
+}

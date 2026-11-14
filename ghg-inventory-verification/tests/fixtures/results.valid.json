@@ -1,0 +1,42 @@
+{
+  "run_id": "SYNTHETIC_RUN",
+  "config_hash": "SYNTHETIC_HASH",
+  "final_version_id": "V1",
+  "versions": [
+    {
+      "version_id": "V1",
+      "method": "average_data",
+      "status": "final",
+      "note": "synthetic result for M0 schema contract testing",
+      "lines": [
+        {
+          "row_id": "R001",
+          "factor_id": "F1",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 100,
+          "ef": 2.0,
+          "gwp": 1,
+          "scale": 1000,
+          "tco2e": 0.2,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "SYNTHETIC_HASH",
+            "ledger_row": "R001",
+            "factor_id": "F1",
+            "gwp_version": "AR6",
+            "conversion_chain": []
+          }
+        }
+      ],
+      "by_category": { "S1": 0.2 },
+      "by_scope": {
+        "S1": 0.2,
+        "S2": { "location_based": 0, "market_based": 0 },
+        "S3": {}
+      },
+      "total": 0.2
+    }
+  ],
+  "checks": { "status": "pending", "errors": [], "warnings": [] }
+}

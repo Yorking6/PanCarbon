@@ -1,0 +1,19 @@
+{
+  "stage": 2,
+  "status": "pass",
+  "rows": 4,
+  "unsigned": [],
+  "excluded": [
+    "P001",
+    "P005"
+  ],
+  "errors": [],
+  "warnings": [
+    "P001: excluded by human review; not an activity row",
+    "P004: voucher required manual review; sign-off accepted",
+    "P005: excluded by human review; not an activity row",
+    "P006: voucher required manual review; sign-off accepted"
+  ],
+  "batch_signoff": true,
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466"
+}

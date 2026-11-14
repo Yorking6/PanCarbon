@@ -1,0 +1,22 @@
+{
+  "entity_ref": "E1",
+  "source_key": "fuel_combustion",
+  "scope": "S1",
+  "s3_category": null,
+  "scope2_mode": null,
+  "gas": "CO2",
+  "vision_candidates": {
+    "lpg_wechat_image.jpg": {
+      "value": 50,
+      "unit": "kg",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "confidence": "low",
+        "needs_manual": true,
+        "warnings": []
+      }
+    }
+  }
+}

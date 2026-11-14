@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "_instructions": "Supply factors at run time. Every factor must state value, unit, applicability, source name and version, GWP version, quality grade and an explicit scale. The Skill ships no numeric factor values.",
+  "_example_structure": {
+    "id": "__REQUIRED__",
+    "value": "__REQUIRED__",
+    "unit": "__REQUIRED__",
+    "gases": {},
+    "applicability": {
+      "activity": "__REQUIRED__",
+      "region": "__REQUIRED__",
+      "year": "__REQUIRED__",
+      "method": "__REQUIRED__"
+    },
+    "source": {
+      "name": "__REQUIRED__",
+      "version": "__REQUIRED__",
+      "url": "__REQUIRED__",
+      "retrieved_at": "__REQUIRED__"
+    },
+    "gwp_version": "__REQUIRED__",
+    "valid_from": "__REQUIRED__",
+    "valid_to": "__REQUIRED__",
+    "priority": "__REQUIRED__",
+    "quality": "__REQUIRED__",
+    "scale": "__REQUIRED__",
+    "note": "__REQUIRED__"
+  },
+  "factors": []
+}

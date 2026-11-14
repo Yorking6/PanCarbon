@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "results",
+  "description": "Machine-readable calculation result. Versions may coexist but exactly one must carry status final; reports must reference final_version_id only.",
+  "type": "object",
+  "required": ["run_id", "config_hash", "final_version_id", "versions", "checks"],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1 },
+    "config_hash": { "type": "string", "minLength": 1 },
+    "final_version_id": { "type": ["string", "null"] },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "version_id",
+          "method",
+          "status",
+          "lines",
+          "by_category",
+          "by_scope",
+          "total"
+        ],
+        "properties": {
+          "version_id": { "type": "string", "minLength": 1 },
+          "method": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["draft", "final", "superseded"]
+          },
+          "note": { "type": ["string", "null"] },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "row_id",
+                "factor_id",
+                "method",
+                "formula",
+                "ad",
+                "ef",
+                "gwp",
+                "scale",
+                "tco2e",
+                "provenance"
+              ],
+              "properties": {
+                "row_id": { "type": "string", "minLength": 1 },
+                "factor_id": { "type": "string", "minLength": 1 },
+                "method": { "type": "string", "minLength": 1 },
+                "formula": { "type": "string", "minLength": 1 },
+                "ad": { "type": ["number", "null"] },
+                "ef": { "type": ["number", "null"] },
+                "gwp": { "type": ["number", "null"] },
+                "scale": { "type": ["number", "null"] },
+                "tco2e": { "type": ["number", "null"] },
+                "share": { "type": ["number", "null"] },
+                "warnings": { "type": "array", "items": { "type": "string" } },
+                "provenance": {
+                  "type": "object",
+                  "required": ["config_hash", "ledger_row", "factor_id"],
+                  "properties": {
+                    "config_hash": { "type": "string" },
+                    "ledger_row": { "type": "string" },
+                    "factor_id": { "type": "string" },
+                    "gwp_version": { "type": ["string", "null"] },
+                    "conversion_chain": { "type": "array" }
+                  }
+                }
+              }
+            }
+          },
+          "by_category": { "type": "object" },
+          "by_scope": {
+            "type": "object",
+            "required": ["S1", "S2", "S3"],
+            "properties": {
+              "S1": { "type": "number" },
+              "S2": { "type": "object" },
+              "S3": { "type": "object" }
+            }
+          },
+          "total": { "type": "number" }
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string", "enum": ["pending", "pass", "fail"] },
+        "errors": { "type": "array", "items": { "type": "object" } },
+        "warnings": { "type": "array", "items": { "type": "object" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "run_id": "RUN-e6d688e601b7",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "final_version_id": "V1",
+  "versions": [
+    {
+      "version_id": "V1",
+      "method": "average_data",
+      "status": "final",
+      "note": null,
+      "lines": [
+        {
+          "row_id": "P002",
+          "factor_id": "F01",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 100.0,
+          "ef": 2.0,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.2,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "P002",
+            "factor_id": "F01",
+            "gwp_version": "AR6",
+            "conversion_chain": []
+          },
+          "share": 0.2631578947368421
+        },
+        {
+          "row_id": "P003",
+          "factor_id": "F01",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 30.0,
+          "ef": 2.0,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.06,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "P003",
+            "factor_id": "F01",
+            "gwp_version": "AR6",
+            "conversion_chain": []
+          },
+          "share": 0.07894736842105263
+        },
+        {
+          "row_id": "P004",
+          "factor_id": "F01",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 200.0,
+          "ef": 2.0,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.4,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "P004",
+            "factor_id": "F01",
+            "gwp_version": "AR6",
+            "conversion_chain": []
+          },
+          "share": 0.5263157894736842
+        },
+        {
+          "row_id": "P006",
+          "factor_id": "F01",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 50.0,
+          "ef": 2.0,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.1,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "P006",
+            "factor_id": "F01",
+            "gwp_version": "AR6",
+            "conversion_chain": []
+          },
+          "share": 0.13157894736842105
+        }
+      ],
+      "by_category": {
+        "S1": 0.76,
+        "S2": 0.0,
+        "S3-1": 0.0,
+        "S3-2": 0.0,
+        "S3-3": 0.0,
+        "S3-4": 0.0,
+        "S3-5": 0.0,
+        "S3-6": 0.0,
+        "S3-7": 0.0,
+        "S3-8": 0.0,
+        "S3-9": 0.0,
+        "S3-10": 0.0,
+        "S3-11": 0.0,
+        "S3-12": 0.0,
+        "S3-13": 0.0,
+        "S3-14": 0.0,
+        "S3-15": 0.0
+      },
+      "by_scope": {
+        "S1": 0.76,
+        "S2": {
+          "location_based": 0.0,
+          "market_based": 0.0
+        },
+        "S3": {
+          "S3-1": 0.0,
+          "S3-2": 0.0,
+          "S3-3": 0.0,
+          "S3-4": 0.0,
+          "S3-5": 0.0,
+          "S3-6": 0.0,
+          "S3-7": 0.0,
+          "S3-8": 0.0,
+          "S3-9": 0.0,
+          "S3-10": 0.0,
+          "S3-11": 0.0,
+          "S3-12": 0.0,
+          "S3-13": 0.0,
+          "S3-14": 0.0,
+          "S3-15": 0.0
+        }
+      },
+      "total": 0.76
+    }
+  ],
+  "checks": {
+    "status": "pass",
+    "errors": [],
+    "warnings": [
+      {
+        "rule": "V15",
+        "object": "V1",
+        "message": "market-based result mirrors location-based; verify market instruments"
+      },
+      {
+        "rule": "V09",
+        "object": "workbook",
+        "message": "recalculated with formulas across 42 cells"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "row_count": 4,
+  "evidence_count": 4,
+  "evidence": [
+    {
+      "file": "fuel_invoice.pdf",
+      "rows": [
+        "P002"
+      ]
+    },
+    {
+      "file": "invoice_bundle.zip::nested_invoice.pdf",
+      "rows": [
+        "P003"
+      ]
+    },
+    {
+      "file": "lpg_monthly.xlsx",
+      "rows": [
+        "P004"
+      ]
+    },
+    {
+      "file": "lpg_wechat_image.jpg",
+      "rows": [
+        "P006"
+      ]
+    }
+  ]
+}

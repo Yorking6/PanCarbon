@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "rows": [
+    {
+      "row_id": "P001",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": "ym:200001",
+        "confidence": "high",
+        "needs_manual": false,
+        "warnings": [
+          "no numeric quantity extracted; manual entry required"
+        ]
+      },
+      "raw": {
+        "value": null,
+        "unit": "CNY",
+        "source_file": "amount_only.pdf",
+        "source_locator": "page1:invoice",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": null,
+        "unit": "CNY"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "amount_only.pdf"
+      ],
+      "confirmation": {
+        "signed_by": null,
+        "signed_at": null
+      },
+      "needs_manual": true,
+      "exclude": true,
+      "warnings": [
+        "no numeric quantity extracted; manual entry required"
+      ],
+      "metadata": {
+        "fields": {
+          "unit": "CNY",
+          "total": "800",
+          "remark": "ym:200001"
+        },
+        "monetary_total": 800,
+        "item": null
+      }
+    },
+    {
+      "row_id": "P002",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": "ym:200001",
+        "confidence": "high",
+        "needs_manual": false,
+        "warnings": []
+      },
+      "raw": {
+        "value": 100,
+        "unit": "kg",
+        "source_file": "fuel_invoice.pdf",
+        "source_locator": "page1:SYN-0001",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 100,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "fuel_invoice.pdf"
+      ],
+      "confirmation": {
+        "signed_by": null,
+        "signed_at": null
+      },
+      "needs_manual": false,
+      "exclude": false,
+      "warnings": [],
+      "metadata": {
+        "fields": {
+          "item": "synthetic fuel",
+          "quantity": "100 kg",
+          "unit": "kg",
+          "total": "500",
+          "invoice_no": "SYN-0001",
+          "issue_date": "2000-02-11",
+          "remark": "ym:200001"
+        },
+        "monetary_total": 500,
+        "item": "synthetic fuel"
+      }
+    },
+    {
+      "row_id": "P003",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": "ym:200001",
+        "confidence": "high",
+        "needs_manual": false,
+        "warnings": []
+      },
+      "raw": {
+        "value": 30,
+        "unit": "kg",
+        "source_file": "invoice_bundle.zip::nested_invoice.pdf",
+        "source_locator": "page1:invoice",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 30,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "invoice_bundle.zip::nested_invoice.pdf"
+      ],
+      "confirmation": {
+        "signed_by": null,
+        "signed_at": null
+      },
+      "needs_manual": false,
+      "exclude": false,
+      "warnings": [],
+      "metadata": {
+        "fields": {
+          "quantity": "30 kg",
+          "unit": "kg",
+          "remark": "ym:200001"
+        },
+        "monetary_total": null,
+        "item": null
+      }
+    },
+    {
+      "row_id": "P004",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": null,
+        "confidence": "medium",
+        "needs_manual": true,
+        "warnings": [
+          "period supplied during human review"
+        ]
+      },
+      "raw": {
+        "value": 200,
+        "unit": "kg",
+        "source_file": "lpg_monthly.xlsx",
+        "source_locator": "monthly!R2",
+        "extractor": "excel_ledger",
+        "confidence": "medium"
+      },
+      "normalized": {
+        "value": 200,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "lpg_monthly.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": null,
+        "signed_at": null
+      },
+      "needs_manual": true,
+      "exclude": false,
+      "warnings": [
+        "no period resolved; manual entry required"
+      ],
+      "metadata": {
+        "sheet": "monthly",
+        "row": 2,
+        "shape": "monthly",
+        "monthly_values": [
+          50,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          200
+        ],
+        "label": "数量/50公斤 10"
+      }
+    },
+    {
+      "row_id": "P005",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "",
+        "end": "",
+        "basis": "estimated",
+        "billing_note": null,
+        "confidence": "low",
+        "needs_manual": true,
+        "warnings": [
+          "no period resolved; manual entry required",
+          "no numeric quantity extracted; manual entry required",
+          "unit unresolved; manual entry required"
+        ]
+      },
+      "raw": {
+        "value": null,
+        "unit": "",
+        "source_file": "lpg_monthly.xlsx",
+        "source_locator": "monthly!R3",
+        "extractor": "excel_ledger",
+        "confidence": "low"
+      },
+      "normalized": {
+        "value": null,
+        "unit": ""
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "lpg_monthly.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": null,
+        "signed_at": null
+      },
+      "needs_manual": true,
+      "exclude": true,
+      "warnings": [
+        "no period resolved; manual entry required",
+        "no numeric quantity extracted; manual entry required",
+        "unit unresolved; manual entry required"
+      ],
+      "metadata": {
+        "sheet": "monthly",
+        "row": 3,
+        "shape": "monthly",
+        "monthly_values": [
+          null,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null
+        ],
+        "label": "金额 5"
+      }
+    },
+    {
+      "row_id": "P006",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": null,
+        "confidence": "low",
+        "needs_manual": true,
+        "warnings": []
+      },
+      "raw": {
+        "value": 50,
+        "unit": "kg",
+        "source_file": "lpg_wechat_image.jpg",
+        "source_locator": "image",
+        "extractor": "image_voucher",
+        "confidence": "low"
+      },
+      "normalized": {
+        "value": 50,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "lpg_wechat_image.jpg"
+      ],
+      "confirmation": {
+        "signed_by": null,
+        "signed_at": null
+      },
+      "needs_manual": true,
+      "exclude": false,
+      "warnings": [],
+      "metadata": {
+        "vision_hint": "Image voucher; the agent may supply a visual candidate, human sign-off is mandatory",
+        "vision_candidate_supplied": true,
+        "image_file": "lpg_wechat_image.jpg"
+      }
+    }
+  ],
+  "warnings": [
+    "amount_only.pdf: Only a monetary amount was found; physical quantity needs a runtime price table or manual entry",
+    "lpg_monthly.xlsx: monthly!3: Spreadsheet total formula is empty or suspicious; recompute from monthly columns",
+    "lpg_monthly.xlsx: monthly!3: Unit is absent or ambiguous; resolve before calculation",
+    "lpg_wechat_image.jpg: Image voucher; the agent may supply a visual candidate, human sign-off is mandatory"
+  ],
+  "extractor_stats": {
+    "pdf_invoice": 2,
+    "zip_bundle": 1,
+    "excel_ledger": 1,
+    "image_voucher": 1
+  }
+}

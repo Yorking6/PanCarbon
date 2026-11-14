@@ -1,0 +1,134 @@
+{
+  "stage": 4,
+  "status": "pass",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "lines": [
+    {
+      "row_id": "P002",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "s3_category": null,
+      "scope2_mode": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F01",
+      "ad": 100.0,
+      "ad_unit": "kg",
+      "ef": 2.0,
+      "ef_unit": "kgCO2e/kg",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F01",
+          "priority": 1,
+          "value": 2.0,
+          "unit": "kgCO2e/kg",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": []
+    },
+    {
+      "row_id": "P003",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "s3_category": null,
+      "scope2_mode": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F01",
+      "ad": 30.0,
+      "ad_unit": "kg",
+      "ef": 2.0,
+      "ef_unit": "kgCO2e/kg",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F01",
+          "priority": 1,
+          "value": 2.0,
+          "unit": "kgCO2e/kg",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": []
+    },
+    {
+      "row_id": "P004",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "s3_category": null,
+      "scope2_mode": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F01",
+      "ad": 200.0,
+      "ad_unit": "kg",
+      "ef": 2.0,
+      "ef_unit": "kgCO2e/kg",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F01",
+          "priority": 1,
+          "value": 2.0,
+          "unit": "kgCO2e/kg",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": []
+    },
+    {
+      "row_id": "P006",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "s3_category": null,
+      "scope2_mode": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "method": "average_data",
+      "method_origin": "per_source",
+      "factor_id": "F01",
+      "ad": 50.0,
+      "ad_unit": "kg",
+      "ef": 2.0,
+      "ef_unit": "kgCO2e/kg",
+      "gwp": 1.0,
+      "scale": 1000,
+      "derived_scale": "1000",
+      "status": "matched",
+      "candidates": [
+        {
+          "factor_id": "F01",
+          "priority": 1,
+          "value": 2.0,
+          "unit": "kgCO2e/kg",
+          "source": "Synthetic Factor Dataset"
+        }
+      ],
+      "warnings": [],
+      "applied_conversion": []
+    }
+  ],
+  "candidates": [],
+  "errors": [],
+  "warnings": []
+}

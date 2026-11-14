@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "factors": [
+    {
+      "id": "F1",
+      "value": 2.0,
+      "unit": "kgCO2e/kg",
+      "gases": { "CO2": 1 },
+      "applicability": {
+        "activity": "synthetic_fuel",
+        "region": "R-A",
+        "year": 2000,
+        "method": "average_data"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 1,
+      "quality": "A",
+      "scale": 1000,
+      "note": "synthetic value for contract testing only"
+    },
+    {
+      "id": "F2",
+      "value": 1.0,
+      "unit": "kgCO2e/tkm",
+      "gases": {},
+      "applicability": {
+        "activity": "synthetic_freight",
+        "region": "R-B",
+        "year": 2000,
+        "method": "distance_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "not_applicable",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 2,
+      "quality": "B",
+      "scale": 1000,
+      "note": "synthetic value for contract testing only"
+    }
+  ]
+}

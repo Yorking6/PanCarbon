@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "_instructions": "Abstract inventory layout. Sheet titles are phrase keys resolved through assets/phrases.json; anchors are resolved by build_inventory.py in M2. No cell coordinates, organization names or values are baked in.",
+  "formula_pattern": "tco2e = ad * ef * gwp / scale",
+  "sheets": [
+    {
+      "key": "boundary",
+      "title_key": "sheet.boundary",
+      "kind": "metadata",
+      "fields": ["organization", "reporting_year", "consolidation_method", "entities", "boundary_description"]
+    },
+    {
+      "key": "source_identification",
+      "title_key": "sheet.source_identification",
+      "kind": "matrix",
+      "fields": ["scope", "iso_category", "s3_category", "source_key", "gases", "applicable", "reason_if_not"]
+    },
+    {
+      "key": "activity_data",
+      "title_key": "sheet.activity_data",
+      "kind": "table",
+      "fields": ["row_id", "entity_ref", "raw_value", "raw_unit", "normalized_value", "normalized_unit", "period", "evidence_files"]
+    },
+    {
+      "key": "factors",
+      "title_key": "sheet.factors",
+      "kind": "table",
+      "fields": ["factor_id", "value", "unit", "applicability", "source", "version", "gwp_version", "scale", "quality"]
+    },
+    {
+      "key": "s12_calc",
+      "title_key": "sheet.s12_calc",
+      "kind": "formula",
+      "fields": ["scope_marker", "category", "source_key", "ad", "ad_unit", "ef", "gwp", "scale", "tco2e", "share", "subtotal"]
+    },
+    {
+      "key": "s3_category",
+      "title_key": "sheet.s3_category",
+      "kind": "formula_repeating",
+      "repeat_by": "s3_category",
+      "fields": ["row_id", "method", "ad", "ad_unit", "ef", "gwp", "scale", "tco2e", "note"]
+    },
+    {
+      "key": "data_quality",
+      "title_key": "sheet.data_quality",
+      "kind": "table",
+      "fields": ["row_id", "activity_grade", "factor_grade", "instrument_grade", "score", "share", "weighted_score"]
+    },
+    {
+      "key": "quality_gaps",
+      "title_key": "sheet.quality_gaps",
+      "kind": "table",
+      "fields": ["gap_id", "category", "data_item", "description", "treatment", "impact", "method_change", "totals"]
+    },
+    {
+      "key": "summary",
+      "title_key": "sheet.summary",
+      "kind": "formula",
+      "fields": ["scope", "tco2e", "share", "total"]
+    }
+  ],
+  "styles": {
+    "header_fill": "DDEBF7",
+    "total_fill": "F2F2F2",
+    "note_fill": "FFF2CC",
+    "number_format": "#,##0.00"
+  },
+  "rules": {
+    "write_formulas_not_values": true,
+    "clear_external_links": true,
+    "forbid_hardcoded_divisors": true,
+    "forbid_max_value_heuristic_for_totals": true
+  }
+}

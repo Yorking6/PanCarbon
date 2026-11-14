@@ -1,0 +1,447 @@
+{
+  "run_id": "RUN-e6d688e601b7",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "final_version_id": "V1",
+  "versions": [
+    {
+      "version_id": "V1",
+      "method": "average_data",
+      "status": "final",
+      "note": null,
+      "lines": [
+        {
+          "row_id": "R001",
+          "factor_id": "F01",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 100.0,
+          "ef": 2.0,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.2,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R001",
+            "factor_id": "F01",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "identity",
+                "from_unit": "kg",
+                "to_unit": "kg",
+                "factor": 1,
+                "reference": null,
+                "note": "no conversion",
+                "result": "100"
+              }
+            ]
+          },
+          "share": 0.027932960893854747
+        },
+        {
+          "row_id": "R002",
+          "factor_id": "F02",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 5.0,
+          "ef": 1.0,
+          "gwp": 100.0,
+          "scale": 1000,
+          "tco2e": 0.5,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R002",
+            "factor_id": "F02",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "multiply",
+                "from_unit": "kg",
+                "to_unit": "kg",
+                "factor": 0.5,
+                "reference": "synthetic_leak_rate",
+                "note": "charge multiplied by leak rate",
+                "result": "5.0"
+              }
+            ]
+          },
+          "share": 0.06983240223463687
+        },
+        {
+          "row_id": "R003",
+          "factor_id": "F03",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.5,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.5,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R003",
+            "factor_id": "F03",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "identity",
+                "from_unit": "kWh",
+                "to_unit": "kWh",
+                "factor": 1,
+                "reference": null,
+                "note": "no conversion",
+                "result": "1000"
+              }
+            ]
+          },
+          "share": 0.06983240223463687
+        },
+        {
+          "row_id": "R004",
+          "factor_id": "F04",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.2,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.2,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R004",
+            "factor_id": "F04",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "identity",
+                "from_unit": "kWh",
+                "to_unit": "kWh",
+                "factor": 1,
+                "reference": null,
+                "note": "same activity data, market-based view",
+                "result": "1000"
+              }
+            ]
+          },
+          "share": 0.027932960893854747
+        },
+        {
+          "row_id": "R005",
+          "factor_id": "F05",
+          "method": "spend_based",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 2000.0,
+          "ef": 0.3,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.6,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R005",
+            "factor_id": "F05",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "currency_conversion",
+                "from_unit": "CNY",
+                "to_unit": "USD",
+                "factor": 0.2,
+                "reference": "fx_table",
+                "note": "synthetic exchange rate supplied at run time",
+                "result": "2000.0"
+              }
+            ]
+          },
+          "share": 0.08379888268156424
+        },
+        {
+          "row_id": "R006",
+          "factor_id": "F06",
+          "method": "spend_based",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.4,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.4,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R006",
+            "factor_id": "F06",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "currency_conversion",
+                "from_unit": "CNY",
+                "to_unit": "USD",
+                "factor": 0.2,
+                "reference": "fx_table",
+                "note": "synthetic exchange rate supplied at run time",
+                "result": "1000.0"
+              }
+            ]
+          },
+          "share": 0.055865921787709494
+        },
+        {
+          "row_id": "R007",
+          "factor_id": "F07",
+          "method": "wtt",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.1,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.1,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R007",
+            "factor_id": "F07",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "identity",
+                "from_unit": "kWh",
+                "to_unit": "kWh",
+                "factor": 1,
+                "reference": null,
+                "note": "no conversion",
+                "result": "1000"
+              }
+            ]
+          },
+          "share": 0.013966480446927373
+        },
+        {
+          "row_id": "R008",
+          "factor_id": "F08",
+          "method": "distance_based",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.6,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.6,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R008",
+            "factor_id": "F08",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "mass_times_distance",
+                "from_unit": "t",
+                "to_unit": "tkm",
+                "factor": 5,
+                "reference": "synthetic_distance_table",
+                "note": "mass multiplied by synthetic haul distance",
+                "result": "1000"
+              }
+            ]
+          },
+          "share": 0.08379888268156424
+        },
+        {
+          "row_id": "R009",
+          "factor_id": "F09",
+          "method": "average_data",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 8.0,
+          "ef": 500.0,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 4.0,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R009",
+            "factor_id": "F09",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "ratio_split",
+                "from_unit": "t",
+                "to_unit": "t",
+                "factor": 0.8,
+                "reference": "synthetic_treatment_share",
+                "note": "share of waste sent to this treatment",
+                "result": "8.0"
+              }
+            ]
+          },
+          "share": 0.5586592178770949
+        },
+        {
+          "row_id": "R010",
+          "factor_id": "F10",
+          "method": "distance_based",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.2,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.2,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R010",
+            "factor_id": "F10",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "fee_to_distance",
+                "from_unit": "CNY",
+                "to_unit": "pkm",
+                "factor": 0.5,
+                "reference": "synthetic_fare_table",
+                "note": "spend converted to passenger kilometres",
+                "result": "1000.0"
+              }
+            ]
+          },
+          "share": 0.027932960893854747
+        },
+        {
+          "row_id": "R011",
+          "factor_id": "F11",
+          "method": "distance_based",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 1000.0,
+          "ef": 0.05,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.05,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R011",
+            "factor_id": "F11",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "sample_amplification",
+                "from_unit": "pkm",
+                "to_unit": "pkm",
+                "factor": 10,
+                "reference": "synthetic_survey",
+                "note": "survey sample amplified to headcount",
+                "result": "1000"
+              }
+            ]
+          },
+          "share": 0.006983240223463687
+        },
+        {
+          "row_id": "R012",
+          "factor_id": "F12",
+          "method": "distance_based",
+          "formula": "ad*ef*gwp/scale",
+          "ad": 500.0,
+          "ef": 0.02,
+          "gwp": 1.0,
+          "scale": 1000,
+          "tco2e": 0.01,
+          "warnings": [],
+          "provenance": {
+            "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+            "ledger_row": "R012",
+            "factor_id": "F12",
+            "gwp_version": "AR6",
+            "conversion_chain": [
+              {
+                "index": 0,
+                "op": "identity",
+                "from_unit": "tkm",
+                "to_unit": "tkm",
+                "factor": 1,
+                "reference": null,
+                "note": "no conversion",
+                "result": "500"
+              }
+            ]
+          },
+          "share": 0.0013966480446927375
+        }
+      ],
+      "by_category": {
+        "S1": 0.7,
+        "S2": 0.5,
+        "S3-1": 0.6,
+        "S3-2": 0.4,
+        "S3-3": 0.1,
+        "S3-4": 0.6,
+        "S3-5": 4.0,
+        "S3-6": 0.2,
+        "S3-7": 0.05,
+        "S3-8": 0.0,
+        "S3-9": 0.01,
+        "S3-10": 0.0,
+        "S3-11": 0.0,
+        "S3-12": 0.0,
+        "S3-13": 0.0,
+        "S3-14": 0.0,
+        "S3-15": 0.0
+      },
+      "by_scope": {
+        "S1": 0.7,
+        "S2": {
+          "location_based": 0.5,
+          "market_based": 0.2
+        },
+        "S3": {
+          "S3-1": 0.6,
+          "S3-2": 0.4,
+          "S3-3": 0.1,
+          "S3-4": 0.6,
+          "S3-5": 4.0,
+          "S3-6": 0.2,
+          "S3-7": 0.05,
+          "S3-8": 0.0,
+          "S3-9": 0.01,
+          "S3-10": 0.0,
+          "S3-11": 0.0,
+          "S3-12": 0.0,
+          "S3-13": 0.0,
+          "S3-14": 0.0,
+          "S3-15": 0.0
+        }
+      },
+      "total": 7.16
+    }
+  ],
+  "checks": {
+    "status": "pass",
+    "errors": [],
+    "warnings": [
+      {
+        "rule": "V15",
+        "object": "V1",
+        "message": "Scope 2 location-based and market-based differ; explain in the report"
+      },
+      {
+        "rule": "V09",
+        "object": "workbook",
+        "message": "recalculated with formulas across 98 cells"
+      }
+    ]
+  }
+}

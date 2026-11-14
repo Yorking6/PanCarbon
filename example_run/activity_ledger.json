@@ -1,0 +1,666 @@
+{
+  "schema_version": "1.0",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "rows": [
+    {
+      "row_id": "R001",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S1",
+      "iso_category": "direct_stationary",
+      "s3_category": null,
+      "scope2_mode": null,
+      "raw": {
+        "value": 100,
+        "unit": "kg",
+        "source_file": "vouchers/fuel.pdf",
+        "source_locator": "B2",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 100,
+        "unit": "kg"
+      },
+      "conversion_chain": [
+        {
+          "op": "identity",
+          "from_unit": "kg",
+          "to_unit": "kg",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion"
+        }
+      ],
+      "data_quality": {
+        "activity": "X",
+        "factor": "A",
+        "instrument": "L"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/fuel.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R002",
+      "entity_ref": "E1",
+      "source_key": "refrigerant_leak",
+      "gas": "HFCs",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S1",
+      "iso_category": "fugitive",
+      "s3_category": null,
+      "scope2_mode": null,
+      "raw": {
+        "value": 10,
+        "unit": "kg",
+        "source_file": "vouchers/refrigerant.xlsx",
+        "source_locator": "C3",
+        "extractor": "excel_ledger",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 5,
+        "unit": "kg"
+      },
+      "conversion_chain": [
+        {
+          "op": "multiply",
+          "from_unit": "kg",
+          "to_unit": "kg",
+          "factor": 0.5,
+          "reference": "synthetic_leak_rate",
+          "note": "charge multiplied by leak rate"
+        }
+      ],
+      "data_quality": {
+        "activity": "Y",
+        "factor": "A",
+        "instrument": "M"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/refrigerant.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R003",
+      "entity_ref": "E1",
+      "source_key": "grid_power_location",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S2",
+      "iso_category": "purchased_energy",
+      "s3_category": null,
+      "scope2_mode": "location_based",
+      "raw": {
+        "value": 1000,
+        "unit": "kWh",
+        "source_file": "vouchers/grid.pdf",
+        "source_locator": "D4",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "kWh"
+      },
+      "conversion_chain": [
+        {
+          "op": "identity",
+          "from_unit": "kWh",
+          "to_unit": "kWh",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion"
+        }
+      ],
+      "data_quality": {
+        "activity": "X",
+        "factor": "A",
+        "instrument": "L"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/grid.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R004",
+      "entity_ref": "E1",
+      "source_key": "grid_power_market",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S2",
+      "iso_category": "purchased_energy",
+      "s3_category": null,
+      "scope2_mode": "market_based",
+      "raw": {
+        "value": 1000,
+        "unit": "kWh",
+        "source_file": "vouchers/grid.pdf",
+        "source_locator": "D4",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "kWh"
+      },
+      "conversion_chain": [
+        {
+          "op": "identity",
+          "from_unit": "kWh",
+          "to_unit": "kWh",
+          "factor": 1,
+          "reference": null,
+          "note": "same activity data, market-based view"
+        }
+      ],
+      "data_quality": {
+        "activity": "X",
+        "factor": "A",
+        "instrument": "L"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/grid.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R005",
+      "entity_ref": "E1",
+      "source_key": "purchased_goods",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "purchased_goods",
+      "s3_category": 1,
+      "scope2_mode": null,
+      "raw": {
+        "value": 10000,
+        "unit": "CNY",
+        "source_file": "vouchers/purchase.xlsx",
+        "source_locator": "F5",
+        "extractor": "excel_ledger",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 2000,
+        "unit": "USD"
+      },
+      "conversion_chain": [
+        {
+          "op": "currency_conversion",
+          "from_unit": "CNY",
+          "to_unit": "USD",
+          "factor": 0.2,
+          "reference": "fx_table",
+          "note": "synthetic exchange rate supplied at run time"
+        }
+      ],
+      "data_quality": {
+        "activity": "Y",
+        "factor": "B",
+        "instrument": "M"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/purchase.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R006",
+      "entity_ref": "E1",
+      "source_key": "capital_goods",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "capital_goods",
+      "s3_category": 2,
+      "scope2_mode": null,
+      "raw": {
+        "value": 5000,
+        "unit": "CNY",
+        "source_file": "vouchers/assets.xlsx",
+        "source_locator": "G6",
+        "extractor": "excel_ledger",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "USD"
+      },
+      "conversion_chain": [
+        {
+          "op": "currency_conversion",
+          "from_unit": "CNY",
+          "to_unit": "USD",
+          "factor": 0.2,
+          "reference": "fx_table",
+          "note": "synthetic exchange rate supplied at run time"
+        }
+      ],
+      "data_quality": {
+        "activity": "Y",
+        "factor": "B",
+        "instrument": "M"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/assets.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R007",
+      "entity_ref": "E1",
+      "source_key": "well_to_tank",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "energy_related",
+      "s3_category": 3,
+      "scope2_mode": null,
+      "raw": {
+        "value": 1000,
+        "unit": "kWh",
+        "source_file": "vouchers/grid.pdf",
+        "source_locator": "D4",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "kWh"
+      },
+      "conversion_chain": [
+        {
+          "op": "identity",
+          "from_unit": "kWh",
+          "to_unit": "kWh",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion"
+        }
+      ],
+      "data_quality": {
+        "activity": "Y",
+        "factor": "B",
+        "instrument": "M"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/grid.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R008",
+      "entity_ref": "E2",
+      "source_key": "upstream_freight",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "transport",
+      "s3_category": 4,
+      "scope2_mode": null,
+      "raw": {
+        "value": 200,
+        "unit": "t",
+        "source_file": "vouchers/upstream.xlsx",
+        "source_locator": "H8",
+        "extractor": "excel_ledger",
+        "confidence": "medium"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "tkm"
+      },
+      "conversion_chain": [
+        {
+          "op": "mass_times_distance",
+          "from_unit": "t",
+          "to_unit": "tkm",
+          "factor": 5,
+          "reference": "synthetic_distance_table",
+          "note": "mass multiplied by synthetic haul distance"
+        }
+      ],
+      "data_quality": {
+        "activity": "Y",
+        "factor": "B",
+        "instrument": "M"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/upstream.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "medium"
+      }
+    },
+    {
+      "row_id": "R009",
+      "entity_ref": "E1",
+      "source_key": "waste_incineration",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "waste",
+      "s3_category": 5,
+      "scope2_mode": null,
+      "raw": {
+        "value": 10,
+        "unit": "t",
+        "source_file": "vouchers/waste.xlsx",
+        "source_locator": "I9",
+        "extractor": "excel_ledger",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 8,
+        "unit": "t"
+      },
+      "conversion_chain": [
+        {
+          "op": "ratio_split",
+          "from_unit": "t",
+          "to_unit": "t",
+          "factor": 0.8,
+          "reference": "synthetic_treatment_share",
+          "note": "share of waste sent to this treatment"
+        }
+      ],
+      "data_quality": {
+        "activity": "X",
+        "factor": "B",
+        "instrument": "L"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/waste.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    },
+    {
+      "row_id": "R010",
+      "entity_ref": "E1",
+      "source_key": "business_travel",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "billing",
+        "billing_note": "invoice window crosses a natural month boundary"
+      },
+      "scope": "S3",
+      "iso_category": "business_travel",
+      "s3_category": 6,
+      "scope2_mode": null,
+      "raw": {
+        "value": 2000,
+        "unit": "CNY",
+        "source_file": "vouchers/travel.pdf",
+        "source_locator": "J10",
+        "extractor": "pdf_invoice",
+        "confidence": "medium"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "pkm"
+      },
+      "conversion_chain": [
+        {
+          "op": "fee_to_distance",
+          "from_unit": "CNY",
+          "to_unit": "pkm",
+          "factor": 0.5,
+          "reference": "synthetic_fare_table",
+          "note": "spend converted to passenger kilometres"
+        }
+      ],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": true,
+      "estimation_note": "synthetic fare-to-distance proxy",
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/travel.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "medium"
+      }
+    },
+    {
+      "row_id": "R011",
+      "entity_ref": "E1",
+      "source_key": "employee_commute",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "estimated",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "employee_commute",
+      "s3_category": 7,
+      "scope2_mode": null,
+      "raw": {
+        "value": 100,
+        "unit": "pkm",
+        "source_file": "vouchers/commute.xlsx",
+        "source_locator": "K11",
+        "extractor": "excel_ledger",
+        "confidence": "low"
+      },
+      "normalized": {
+        "value": 1000,
+        "unit": "pkm"
+      },
+      "conversion_chain": [
+        {
+          "op": "sample_amplification",
+          "from_unit": "pkm",
+          "to_unit": "pkm",
+          "factor": 10,
+          "reference": "synthetic_survey",
+          "note": "survey sample amplified to headcount"
+        }
+      ],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": true,
+      "estimation_note": "synthetic survey amplification",
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/commute.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "low"
+      }
+    },
+    {
+      "row_id": "R012",
+      "entity_ref": "E2",
+      "source_key": "downstream_freight",
+      "gas": "CO2",
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-12-31",
+        "basis": "consumption",
+        "billing_note": null
+      },
+      "scope": "S3",
+      "iso_category": "transport",
+      "s3_category": 9,
+      "scope2_mode": null,
+      "raw": {
+        "value": 500,
+        "unit": "tkm",
+        "source_file": "vouchers/downstream.xlsx",
+        "source_locator": "L12",
+        "extractor": "excel_ledger",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 500,
+        "unit": "tkm"
+      },
+      "conversion_chain": [
+        {
+          "op": "identity",
+          "from_unit": "tkm",
+          "to_unit": "tkm",
+          "factor": 1,
+          "reference": null,
+          "note": "no conversion"
+        }
+      ],
+      "data_quality": {
+        "activity": "X",
+        "factor": "B",
+        "instrument": "L"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "vouchers/downstream.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "manual",
+        "confidence": "high"
+      }
+    }
+  ]
+}

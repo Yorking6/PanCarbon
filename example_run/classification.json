@@ -1,0 +1,278 @@
+{
+  "stage": 3,
+  "status": "pass",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "rows": [
+    {
+      "row_id": "R001",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "iso_category": "direct_stationary",
+      "s3_category": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R002",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "iso_category": "fugitive",
+      "s3_category": null,
+      "source_key": "refrigerant_leak",
+      "gas": "HFCs",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R003",
+      "entity_ref": "E1",
+      "scope": "S2",
+      "iso_category": "purchased_energy",
+      "s3_category": null,
+      "source_key": "grid_power_location",
+      "gas": "CO2",
+      "scope2_mode": "location_based",
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R004",
+      "entity_ref": "E1",
+      "scope": "S2",
+      "iso_category": "purchased_energy",
+      "s3_category": null,
+      "source_key": "grid_power_market",
+      "gas": "CO2",
+      "scope2_mode": "market_based",
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R005",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "iso_category": "purchased_goods",
+      "s3_category": 1,
+      "source_key": "purchased_goods",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R006",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "iso_category": "capital_goods",
+      "s3_category": 2,
+      "source_key": "capital_goods",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R007",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "iso_category": "energy_related",
+      "s3_category": 3,
+      "source_key": "well_to_tank",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R008",
+      "entity_ref": "E2",
+      "scope": "S3",
+      "iso_category": "transport",
+      "s3_category": 4,
+      "source_key": "upstream_freight",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R009",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "iso_category": "waste",
+      "s3_category": 5,
+      "source_key": "waste_incineration",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R010",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "iso_category": "business_travel",
+      "s3_category": 6,
+      "source_key": "business_travel",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R011",
+      "entity_ref": "E1",
+      "scope": "S3",
+      "iso_category": "employee_commute",
+      "s3_category": 7,
+      "source_key": "employee_commute",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "R012",
+      "entity_ref": "E2",
+      "scope": "S3",
+      "iso_category": "transport",
+      "s3_category": 9,
+      "source_key": "downstream_freight",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    }
+  ],
+  "categories": {
+    "S1": {
+      "applicable": true,
+      "row_ids": [
+        "R001",
+        "R002"
+      ],
+      "reason_if_not": null
+    },
+    "S2": {
+      "applicable": true,
+      "row_ids": [
+        "R003",
+        "R004"
+      ],
+      "reason_if_not": null
+    },
+    "S3-1": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R005"
+      ],
+      "reason_if_not": null
+    },
+    "S3-2": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R006"
+      ],
+      "reason_if_not": null
+    },
+    "S3-3": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R007"
+      ],
+      "reason_if_not": null
+    },
+    "S3-4": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R008"
+      ],
+      "reason_if_not": null
+    },
+    "S3-5": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R009"
+      ],
+      "reason_if_not": null
+    },
+    "S3-6": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R010"
+      ],
+      "reason_if_not": null
+    },
+    "S3-7": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R011"
+      ],
+      "reason_if_not": null
+    },
+    "S3-8": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no upstream leased assets in synthetic fixture"
+    },
+    "S3-9": {
+      "applicable": true,
+      "enabled": true,
+      "row_ids": [
+        "R012"
+      ],
+      "reason_if_not": null
+    },
+    "S3-10": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no downstream processing in synthetic fixture"
+    },
+    "S3-11": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no use-phase in synthetic fixture"
+    },
+    "S3-12": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no end-of-life in synthetic fixture"
+    },
+    "S3-13": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no downstream leasing in synthetic fixture"
+    },
+    "S3-14": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no franchises in synthetic fixture"
+    },
+    "S3-15": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no investments in synthetic fixture"
+    }
+  },
+  "unmapped": [],
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "_instructions": "Generic voucher field aliases and period patterns. No organization names, prices, exchange rates or factor values are stored here; all numeric conversion constants are supplied at run time through hints.",
+  "field_aliases": {
+    "item": ["项目名称", "货物或应税劳务名称", "品名", "Item", "Description"],
+    "quantity": ["数量", "Quantity", "Qty"],
+    "unit": ["单位", "Unit"],
+    "amount": ["金额", "Amount"],
+    "total": ["价税合计", "合计金额", "Total", "Grand Total"],
+    "invoice_no": ["发票号码", "数电发票号码", "Invoice No"],
+    "issue_date": ["开票日期", "Issue Date"],
+    "buyer": ["购买方名称", "购方名称", "Buyer"],
+    "seller": ["销方名称", "销售方名称", "Seller"],
+    "remark": ["备注", "Remark", "Notes"]
+  },
+  "period_patterns": {
+    "yyyymm": "(?:年月|ym|billing[_ ]?month|period)\\s*[:：]?\\s*(\\d{6})",
+    "date_range": "(\\d{4}[-/]\\d{1,2}[-/]\\d{1,2})\\s*(?:至|到|to|~|-)\\s*(\\d{4}[-/]\\d{1,2}[-/]\\d{1,2})",
+    "date": "(\\d{4})\\s*[年/-]\\s*(\\d{1,2})\\s*[月/-]\\s*(\\d{1,2})",
+    "yyyymm_slash": "(\\d{4})[-/](\\d{1,2})(?!\\d)"
+  },
+  "unit_hints": [
+    "kg", "t", "L", "m3", "kWh", "MWh", "km", "tkm", "pkm",
+    "CNY", "USD", "bottle", "roomnight", "unit",
+    "瓶", "升", "度", "吨", "千克", "公斤", "立方米", "元", "万元", "间夜", "件"
+  ],
+  "month_columns": [
+    "1月", "2月", "3月", "4月", "5月", "6月",
+    "7月", "8月", "9月", "10月", "11月", "12月",
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "合计", "Total"
+  ],
+  "checkbox_symbols": ["ü", "√", "✓", "☑"],
+  "amount_only_keywords": ["加油费", "费用", "金额", "amount", "fee", "charge"],
+  "unit_in_label_patterns": [
+    "(?:数量|用量|重量)\\s*[/／]\\s*(\\d+(?:\\.\\d+)?)\\s*(公斤|千克|kg|吨|t|升|L)",
+    "\\((\\d+(?:\\.\\d+)?)\\s*(kg|t|L|m3|kWh)\\)"
+  ],
+  "manual_reasons": {
+    "no_text_layer": "PDF has no extractable text layer; manual entry or visual reading required",
+    "image_voucher": "Image voucher; the agent may supply a visual candidate, human sign-off is mandatory",
+    "amount_only": "Only a monetary amount was found; physical quantity needs a runtime price table or manual entry",
+    "missing_unit": "Unit is absent or ambiguous; resolve before calculation",
+    "template_year": "Template year in the voucher differs from the configured reporting year; verify",
+    "cross_month": "Billing period crosses a natural month boundary; verify the consumption period",
+    "broken_formula": "Spreadsheet total formula is empty or suspicious; recompute from monthly columns",
+    "issue_date_only": "Only the invoice issue date is available; it is not the consumption period"
+  }
+}

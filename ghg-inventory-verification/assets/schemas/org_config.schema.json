@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "org_config",
+  "description": "Runtime-injected organization configuration. The Skill package ships only an empty template; every value is supplied at run time.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "organization",
+    "reporting_year",
+    "consolidation_method",
+    "entities",
+    "gases",
+    "gwp_version",
+    "scope2",
+    "scope3",
+    "methodology",
+    "assurance",
+    "report",
+    "currency",
+    "recalc_policy",
+    "factor_library_ref",
+    "activity_ledger_ref"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "minLength": 1 },
+    "organization": {
+      "type": "object",
+      "required": ["name", "boundary_description"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "boundary_description": { "type": "string", "minLength": 1 },
+        "addresses": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "reporting_year": { "type": "integer", "minimum": 1900, "maximum": 2100 },
+    "base_year": { "type": ["integer", "null"] },
+    "consolidation_method": {
+      "type": "string",
+      "enum": ["operational_control", "financial_control", "equity_share"]
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "grid_region_ref"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "grid_region_ref": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "gases": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "gwp_version": { "type": "string", "enum": ["AR4", "AR5", "AR6"] },
+    "scope2": {
+      "type": "object",
+      "required": ["modes", "market_instruments"],
+      "properties": {
+        "modes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["location_based", "market_based"] }
+        },
+        "market_instruments": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "scope3": {
+      "type": "object",
+      "required": ["enabled_categories", "not_applicable_reasons", "cutoff"],
+      "properties": {
+        "enabled_categories": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1, "maximum": 15 }
+        },
+        "not_applicable_reasons": { "type": "object" },
+        "cutoff": {
+          "type": "object",
+          "required": ["rule", "threshold_pct"],
+          "properties": {
+            "rule": { "type": ["string", "null"] },
+            "threshold_pct": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "methodology": {
+      "type": "object",
+      "required": ["default", "per_source"],
+      "properties": {
+        "default": { "type": ["string", "null"] },
+        "per_source": { "type": "object" },
+        "allowed_methods": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "assurance": {
+      "type": "object",
+      "required": ["level", "materiality", "verifier"],
+      "properties": {
+        "level": { "type": ["string", "null"] },
+        "materiality": { "type": ["number", "null"] },
+        "verifier": { "type": ["string", "null"] }
+      }
+    },
+    "report": {
+      "type": "object",
+      "required": ["modes", "languages", "charts"],
+      "properties": {
+        "modes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["A", "B"] }
+        },
+        "languages": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["zh", "en"] }
+        },
+        "charts": { "type": "boolean" },
+        "titles": { "type": "object" },
+        "signoff_ref": { "type": ["string", "null"] }
+      }
+    },
+    "currency": {
+      "type": "object",
+      "required": ["code", "fx_table_ref"],
+      "properties": {
+        "code": { "type": "string", "minLength": 3 },
+        "fx_table_ref": { "type": ["string", "null"] }
+      }
+    },
+    "recalc_policy": {
+      "type": "object",
+      "required": ["base_year_recalc_trigger"],
+      "properties": {
+        "base_year_recalc_trigger": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "grade_thresholds": { "type": "object" },
+        "volatility_warn_pct": { "type": "number" },
+        "scores": { "type": "object" }
+      }
+    },
+    "factor_library_ref": { "type": "string", "minLength": 1 },
+    "activity_ledger_ref": { "type": "string", "minLength": 1 }
+  }
+}

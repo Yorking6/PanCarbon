@@ -1,0 +1,10 @@
+# Runtime dependencies for M2 onward. M0/M1 run on the standard library only.
+# Install into a venv outside the Skill package so that package_skill.py never
+# bundles third-party site-packages into the distribution zip.
+openpyxl>=3.1
+xlrd>=2.0
+pypdf>=5.0
+python-docx>=1.1
+matplotlib>=3.8
+formulas>=1.2
+jsonschema>=4.20

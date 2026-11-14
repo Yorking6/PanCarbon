@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "rows": [
+    {
+      "row_id": "P002",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": "ym:200001",
+        "confidence": "high",
+        "needs_manual": false,
+        "warnings": []
+      },
+      "raw": {
+        "value": 100,
+        "unit": "kg",
+        "source_file": "fuel_invoice.pdf",
+        "source_locator": "page1:SYN-0001",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 100,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "fuel_invoice.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "batch_signoff"
+      },
+      "warnings": []
+    },
+    {
+      "row_id": "P003",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": "ym:200001",
+        "confidence": "high",
+        "needs_manual": false,
+        "warnings": []
+      },
+      "raw": {
+        "value": 30,
+        "unit": "kg",
+        "source_file": "invoice_bundle.zip::nested_invoice.pdf",
+        "source_locator": "page1:invoice",
+        "extractor": "pdf_invoice",
+        "confidence": "high"
+      },
+      "normalized": {
+        "value": 30,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "invoice_bundle.zip::nested_invoice.pdf"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "batch_signoff"
+      },
+      "warnings": []
+    },
+    {
+      "row_id": "P004",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": null,
+        "confidence": "medium",
+        "needs_manual": true,
+        "warnings": [
+          "period supplied during human review"
+        ]
+      },
+      "raw": {
+        "value": 200,
+        "unit": "kg",
+        "source_file": "lpg_monthly.xlsx",
+        "source_locator": "monthly!R2",
+        "extractor": "excel_ledger",
+        "confidence": "medium"
+      },
+      "normalized": {
+        "value": 200,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "lpg_monthly.xlsx"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "batch_signoff"
+      },
+      "warnings": [
+        "no period resolved; manual entry required"
+      ]
+    },
+    {
+      "row_id": "P006",
+      "entity_ref": "E1",
+      "source_key": "fuel_combustion",
+      "scope": "S1",
+      "s3_category": null,
+      "gas": "CO2",
+      "scope2_mode": null,
+      "period": {
+        "start": "2000-01-01",
+        "end": "2000-01-31",
+        "basis": "consumption",
+        "billing_note": null,
+        "confidence": "low",
+        "needs_manual": true,
+        "warnings": []
+      },
+      "raw": {
+        "value": 50,
+        "unit": "kg",
+        "source_file": "lpg_wechat_image.jpg",
+        "source_locator": "image",
+        "extractor": "image_voucher",
+        "confidence": "low"
+      },
+      "normalized": {
+        "value": 50,
+        "unit": "kg"
+      },
+      "conversion_chain": [],
+      "data_quality": {
+        "activity": "Z",
+        "factor": "C",
+        "instrument": "S"
+      },
+      "estimated": false,
+      "estimation_note": null,
+      "carry_over_from": null,
+      "evidence_files": [
+        "lpg_wechat_image.jpg"
+      ],
+      "confirmation": {
+        "signed_by": "Synthetic Reviewer",
+        "signed_at": "2000-12-31T00:00:00",
+        "method": "batch_signoff"
+      },
+      "warnings": []
+    }
+  ]
+}

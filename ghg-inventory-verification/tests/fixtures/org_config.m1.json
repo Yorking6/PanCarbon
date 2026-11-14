@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "organization": {
+    "name": "Synthetic Org M1",
+    "boundary_description": "Synthetic multi-method boundary for M1 contract testing",
+    "addresses": []
+  },
+  "reporting_year": 2000,
+  "base_year": 1999,
+  "consolidation_method": "operational_control",
+  "entities": [
+    { "id": "E1", "name": "Synthetic Site One", "grid_region_ref": "R-A" },
+    { "id": "E2", "name": "Synthetic Site Two", "grid_region_ref": "R-B" }
+  ],
+  "gases": ["CO2", "CH4", "N2O", "HFCs"],
+  "gwp_version": "AR6",
+  "scope2": {
+    "modes": ["location_based", "market_based"],
+    "market_instruments": [
+      { "type": "synthetic_instrument", "quantity": 1, "owner": "E1" }
+    ]
+  },
+  "scope3": {
+    "enabled_categories": [1, 2, 3, 4, 5, 6, 7, 9],
+    "not_applicable_reasons": {
+      "8": "no upstream leased assets in synthetic fixture",
+      "10": "no downstream processing in synthetic fixture",
+      "11": "no use-phase in synthetic fixture",
+      "12": "no end-of-life in synthetic fixture",
+      "13": "no downstream leasing in synthetic fixture",
+      "14": "no franchises in synthetic fixture",
+      "15": "no investments in synthetic fixture"
+    },
+    "cutoff": { "rule": null, "threshold_pct": 0 }
+  },
+  "methodology": {
+    "default": "average_data",
+    "per_source": {
+      "fuel_combustion": "average_data",
+      "refrigerant_leak": "average_data",
+      "grid_power_location": "average_data",
+      "grid_power_market": "average_data",
+      "purchased_goods": "spend_based",
+      "capital_goods": "spend_based",
+      "well_to_tank": "wtt",
+      "upstream_freight": "distance_based",
+      "waste_incineration": "average_data",
+      "business_travel": "distance_based",
+      "employee_commute": "distance_based",
+      "downstream_freight": "distance_based"
+    },
+    "allowed_methods": [
+      "average_data", "spend_based", "distance_based", "wtt", "supplier_specific"
+    ]
+  },
+  "assurance": {
+    "level": "limited",
+    "materiality": 5,
+    "verifier": "Synthetic Verifier"
+  },
+  "report": {
+    "modes": ["A", "B"],
+    "languages": ["zh", "en"],
+    "charts": true,
+    "titles": {},
+    "signoff_ref": "signoff.json"
+  },
+  "currency": { "code": "CNY", "fx_table_ref": "fx.json" },
+  "recalc_policy": { "base_year_recalc_trigger": ["boundary_change", "method_change"] },
+  "quality": {
+    "grade_thresholds": {},
+    "volatility_warn_pct": 20,
+    "scores": {}
+  },
+  "factor_library_ref": "factor_library.json",
+  "activity_ledger_ref": "activity_ledger.json"
+}

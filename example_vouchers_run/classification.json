@@ -1,0 +1,165 @@
+{
+  "stage": 3,
+  "status": "pass",
+  "config_hash": "e6d688e601b7467d4a08489495c9cb8a5c1b751d62ca49e7c261b9172ff80466",
+  "rows": [
+    {
+      "row_id": "P002",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "iso_category": null,
+      "s3_category": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "P003",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "iso_category": null,
+      "s3_category": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "P004",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "iso_category": null,
+      "s3_category": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    },
+    {
+      "row_id": "P006",
+      "entity_ref": "E1",
+      "scope": "S1",
+      "iso_category": null,
+      "s3_category": null,
+      "source_key": "fuel_combustion",
+      "gas": "CO2",
+      "scope2_mode": null,
+      "applicable": true,
+      "reason_if_not": null
+    }
+  ],
+  "categories": {
+    "S1": {
+      "applicable": true,
+      "row_ids": [
+        "P002",
+        "P003",
+        "P004",
+        "P006"
+      ],
+      "reason_if_not": null
+    },
+    "S2": {
+      "applicable": false,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-1": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-2": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-3": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-4": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-5": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-6": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-7": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-8": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no upstream leased assets in synthetic fixture"
+    },
+    "S3-9": {
+      "applicable": false,
+      "enabled": true,
+      "row_ids": [],
+      "reason_if_not": null
+    },
+    "S3-10": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no downstream processing in synthetic fixture"
+    },
+    "S3-11": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no use-phase in synthetic fixture"
+    },
+    "S3-12": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no end-of-life in synthetic fixture"
+    },
+    "S3-13": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no downstream leasing in synthetic fixture"
+    },
+    "S3-14": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no franchises in synthetic fixture"
+    },
+    "S3-15": {
+      "applicable": false,
+      "enabled": false,
+      "row_ids": [],
+      "reason_if_not": "no investments in synthetic fixture"
+    }
+  },
+  "unmapped": [],
+  "errors": [],
+  "warnings": []
+}

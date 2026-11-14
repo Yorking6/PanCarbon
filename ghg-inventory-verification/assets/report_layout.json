@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "_instructions": "Structural layout only. Section titles, labels and fixed prose are resolved through assets/phrases.json; all numbers are filled into table cells by build_report.py.",
+  "modes": {
+    "A": {
+      "title_key": "cover.title",
+      "standard_key": "cover.standard",
+      "conclusion_key": "report.A.conclusion",
+      "sections": [
+        {
+          "id": "basic_information",
+          "heading_key": "report.A.section.basic_information",
+          "kind": "key_value",
+          "source": "basic_info"
+        },
+        {
+          "id": "overview",
+          "heading_key": "report.A.section.overview",
+          "kind": "key_value",
+          "source": "overview"
+        },
+        {
+          "id": "summary",
+          "heading_key": "report.A.section.summary",
+          "kind": "table",
+          "source": "scope_summary",
+          "columns": ["label.item", "label.tco2e", "label.share"]
+        },
+        {
+          "id": "method",
+          "heading_key": "report.A.section.method",
+          "kind": "table",
+          "source": "calculation_lines",
+          "columns": ["label.row_id", "label.method", "label.ad", "label.ef", "label.gwp", "label.scale", "label.tco2e"]
+        },
+        {
+          "id": "factors",
+          "heading_key": "report.A.section.factors",
+          "kind": "table",
+          "source": "factor_list",
+          "columns": ["label.factor_id", "label.value", "label.unit", "label.source", "label.gwp_version"]
+        },
+        {
+          "id": "quality",
+          "heading_key": "report.A.section.quality",
+          "kind": "prose",
+          "text_key": "report.A.prose.quality"
+        },
+        {
+          "id": "uncertainty",
+          "heading_key": "report.A.section.uncertainty",
+          "kind": "prose",
+          "text_key": "report.A.prose.uncertainty"
+        },
+        {
+          "id": "evidence",
+          "heading_key": "report.A.section.evidence",
+          "kind": "table",
+          "source": "evidence_list",
+          "columns": ["label.item", "label.evidence"]
+        },
+        {
+          "id": "charts",
+          "heading_key": "report.A.section.charts",
+          "kind": "charts"
+        }
+      ]
+    },
+    "B": {
+      "title_key": "cover.title.B",
+      "standard_key": "cover.standard.B",
+      "conclusion_key": null,
+      "sections": [
+        {
+          "id": "objective",
+          "heading_key": "report.B.section.objective",
+          "kind": "prose",
+          "text_key": "report.B.prose.objective"
+        },
+        {
+          "id": "subject_data",
+          "heading_key": "report.A.section.summary",
+          "kind": "table",
+          "source": "scope_summary",
+          "columns": ["label.item", "label.tco2e", "label.share"]
+        },
+        {
+          "id": "criteria",
+          "heading_key": "report.B.section.criteria",
+          "kind": "prose",
+          "text_key": "report.B.prose.criteria"
+        },
+        {
+          "id": "assurance",
+          "heading_key": "report.B.section.assurance",
+          "kind": "key_value",
+          "source": "assurance"
+        },
+        {
+          "id": "procedures",
+          "heading_key": "report.B.section.procedures",
+          "kind": "table",
+          "source": "procedures",
+          "columns": ["label.procedure", "label.status"]
+        },
+        {
+          "id": "findings",
+          "heading_key": "report.B.section.findings",
+          "kind": "table",
+          "source": "findings",
+          "columns": ["label.finding", "label.category", "label.status"]
+        },
+        {
+          "id": "statement",
+          "heading_key": "report.B.section.statement",
+          "kind": "guarded_statement"
+        },
+        {
+          "id": "charts",
+          "heading_key": "report.B.section.charts",
+          "kind": "charts"
+        }
+      ]
+    }
+  }
+}

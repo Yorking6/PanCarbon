@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "factors": [
+    {
+      "id": "F01",
+      "value": 2.0,
+      "unit": "kgCO2e/kg",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "fuel_combustion",
+        "region": "*",
+        "year": 2000,
+        "method": "average_data"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 1,
+      "quality": "A",
+      "scale": 1000,
+      "note": "combustion"
+    },
+    {
+      "id": "F02",
+      "value": 1.0,
+      "unit": "kgCO2e/kg",
+      "gases": {
+        "HFCs": 100
+      },
+      "applicability": {
+        "activity": "refrigerant_leak",
+        "region": "*",
+        "year": 2000,
+        "method": "average_data"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 2,
+      "quality": "A",
+      "scale": 1000,
+      "note": "fugitive with GWP"
+    },
+    {
+      "id": "F03",
+      "value": 0.5,
+      "unit": "kgCO2e/kWh",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "grid_power_location",
+        "region": "*",
+        "year": 2000,
+        "method": "average_data"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 3,
+      "quality": "A",
+      "scale": 1000,
+      "note": "location-based grid"
+    },
+    {
+      "id": "F04",
+      "value": 0.2,
+      "unit": "kgCO2e/kWh",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "grid_power_market",
+        "region": "*",
+        "year": 2000,
+        "method": "average_data"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 4,
+      "quality": "A",
+      "scale": 1000,
+      "note": "market-based grid"
+    },
+    {
+      "id": "F05",
+      "value": 0.3,
+      "unit": "kgCO2e/USD",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "purchased_goods",
+        "region": "*",
+        "year": 2000,
+        "method": "spend_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 5,
+      "quality": "B",
+      "scale": 1000,
+      "note": "spend-based EEIO"
+    },
+    {
+      "id": "F06",
+      "value": 0.4,
+      "unit": "kgCO2e/USD",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "capital_goods",
+        "region": "*",
+        "year": 2000,
+        "method": "spend_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 6,
+      "quality": "B",
+      "scale": 1000,
+      "note": "capital goods"
+    },
+    {
+      "id": "F07",
+      "value": 0.1,
+      "unit": "kgCO2e/kWh",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "well_to_tank",
+        "region": "*",
+        "year": 2000,
+        "method": "wtt"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 7,
+      "quality": "B",
+      "scale": 1000,
+      "note": "upstream energy"
+    },
+    {
+      "id": "F08",
+      "value": 0.6,
+      "unit": "kgCO2e/tkm",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "upstream_freight",
+        "region": "*",
+        "year": 2000,
+        "method": "distance_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 8,
+      "quality": "B",
+      "scale": 1000,
+      "note": "upstream freight"
+    },
+    {
+      "id": "F09",
+      "value": 500.0,
+      "unit": "kgCO2e/t",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "waste_incineration",
+        "region": "*",
+        "year": 2000,
+        "method": "average_data"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 9,
+      "quality": "B",
+      "scale": 1000,
+      "note": "waste treatment"
+    },
+    {
+      "id": "F10",
+      "value": 0.2,
+      "unit": "kgCO2e/pkm",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "business_travel",
+        "region": "*",
+        "year": 2000,
+        "method": "distance_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 10,
+      "quality": "B",
+      "scale": 1000,
+      "note": "fee to distance"
+    },
+    {
+      "id": "F11",
+      "value": 0.05,
+      "unit": "kgCO2e/pkm",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "employee_commute",
+        "region": "*",
+        "year": 2000,
+        "method": "distance_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 11,
+      "quality": "C",
+      "scale": 1000,
+      "note": "survey amplification"
+    },
+    {
+      "id": "F12",
+      "value": 0.02,
+      "unit": "kgCO2e/tkm",
+      "gases": {
+        "CO2": 1
+      },
+      "applicability": {
+        "activity": "downstream_freight",
+        "region": "*",
+        "year": 2000,
+        "method": "distance_based"
+      },
+      "source": {
+        "name": "Synthetic Factor Dataset",
+        "version": "v0",
+        "url": null,
+        "retrieved_at": null
+      },
+      "gwp_version": "AR6",
+      "valid_from": null,
+      "valid_to": null,
+      "priority": 12,
+      "quality": "B",
+      "scale": 1000,
+      "note": "downstream freight"
+    }
+  ]
+}
