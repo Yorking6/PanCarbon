@@ -1,5 +1,5 @@
 ---
-name: ghg-inventory-verification
+name: pancarbon
 description: 依据 GHG Protocol 与 ISO 14064 完成组织温室气体排放核算与核查。当用户提供一个报告年内 Scope 1/2/3 的活动数据与凭证（能源发票、外购电力发票、上下游运输、采购、差旅、通勤、问卷等），要求计算 tCO2e、生成温室气体排放核查清册、或生成温室气体计算报告与第三方核查报告时触发。包含可插拔凭证抽取、人工确认闸、方法与排放因子匹配、带公式 xlsx 清册、中英双模式报告、勾稽校验与交付打包。组织边界、报告年、实体清单、排放因子库、方法学与保证等级全部由运行时配置注入。
 description_en: Organization-level GHG inventory and verification per GHG Protocol and ISO 14064. Triggered when a user supplies one reporting year of Scope 1/2/3 activity data and vouchers and asks for tCO2e calculation, a GHG inventory workbook, an organizational GHG report, or a third-party verification report. Covers voucher extraction, a human confirmation gate, method and factor matching, a formula-driven xlsx inventory, bilingual dual-mode reports, reconciliation checks and delivery packaging.
 agent_created: true

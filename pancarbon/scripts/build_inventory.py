@@ -414,7 +414,7 @@ def build(cfg: dict, ledger: dict, factors_lib: dict, classification: dict,
     # ---------- workbook hygiene ----------
     wb._external_links = []
     wb.properties.title = "GHG emission inventory (AI-assisted generation)"
-    wb.properties.creator = "ghg-inventory-verification skill"
+    wb.properties.creator = "PanCarbon skill"
     wb.properties.description = AIGC_NOTE
     wb.properties.keywords = "GHG,inventory,AI-generated"
     wb.properties.category = "GHG inventory"

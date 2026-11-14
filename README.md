@@ -1,4 +1,6 @@
-# ghg-inventory-verification — 组织温室气体排放核查 Agent Skill
+# 盘碳 PanCarbon — 组织温室气体排放核查 Agent Skill
+
+> **盘碳**，谐音「盘查」——把组织一年的碳排放盘成一本经得起审计的账。
 
 依据 **GHG Protocol** 与 **ISO 14064-1/-3** 完成组织温室气体排放核算与核查的 Agent Skill。把「原始凭证 → 活动数据 → 方法与排放因子 → tCO2e → 排放核查清册 → 核查报告」变成一条可复现、可追溯、可校验的流水线。
 
@@ -18,7 +20,7 @@
 ## 目录结构
 
 ```
-ghg-inventory-verification/   # Skill 包本体（SKILL.md + scripts + references + assets + tests）
+pancarbon/                    # Skill 包本体（SKILL.md + scripts + references + assets + tests）
 example_run/                  # 标准化台账直入的端到端演示（合成数据）
 example_vouchers_run/         # 从原始凭证出发的端到端演示（合成数据，17 个文件全流程）
 ```
@@ -26,34 +28,34 @@ example_vouchers_run/         # 从原始凭证出发的端到端演示（合成
 ## 环境要求
 
 - Python ≥ 3.10（建议 3.13）
-- 依赖见 `ghg-inventory-verification/scripts/requirements.txt`，**必须安装在 Skill 包之外的独立虚拟环境**
+- 依赖见 `pancarbon/scripts/requirements.txt`，**必须安装在 Skill 包之外的独立虚拟环境**
 
 ```bash
 python -m venv .venv
-.venv\Scripts\pip install -r ghg-inventory-verification\scripts\requirements.txt
+.venv\Scripts\pip install -r pancarbon\scripts\requirements.txt
 ```
 
 ## 快速开始
 
 ```bash
 # 0. 环境自检
-python ghg-inventory-verification/scripts/cli.py deps
+python pancarbon/scripts/cli.py deps
 
 # 1. 复制 assets/config_template.json 与 assets/factor_library_template.json
 #    到运行目录，填写 org_config.json 与 factor_library.json，然后：
-python ghg-inventory-verification/scripts/cli.py init --config <run>/org_config.json --run-dir <run>
+python pancarbon/scripts/cli.py init --config <run>/org_config.json --run-dir <run>
 
 # 2. 凭证抽取 → 待确认台账
-python ghg-inventory-verification/scripts/cli.py extract --run-dir <run> --input-dir <run>/vouchers
+python pancarbon/scripts/cli.py extract --run-dir <run> --input-dir <run>/vouchers
 
 # 3. 人工复核 pending_ledger.json 后批量签核 → activity_ledger.json
-python ghg-inventory-verification/scripts/cli.py confirm --run-dir <run> --batch-signoff <run>/batch_signoff.json
+python pancarbon/scripts/cli.py confirm --run-dir <run> --batch-signoff <run>/batch_signoff.json
 
 # 4. 一键流水线：分类 → 匹配 → 计算 → 清册 → 报告 → 校验 → 交付
-python ghg-inventory-verification/scripts/cli.py pipeline --run-dir <run>
+python pancarbon/scripts/cli.py pipeline --run-dir <run>
 ```
 
-校验通过后，交付包位于 `<run>/delivery/<run_id>_delivery.zip`。完整命令表与运行约定见 `ghg-inventory-verification/SKILL.md`。
+校验通过后，交付包位于 `<run>/delivery/<run_id>_delivery.zip`。完整命令表与运行约定见 `pancarbon/SKILL.md`。
 
 ## 核心纪律
 
